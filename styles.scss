@@ -1,5 +1,6 @@
 $timing: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $duration: 3s;
+
 @keyframes slideDown {
   0% {
     transform: translateY(0);
@@ -34,23 +35,18 @@ $duration: 3s;
   }
 }
 
-/**
- * Variables
- */
 // Colors
 $primary-color: #d8ba5b;
 $black: #060807;
 $green: #97be9b;
 $white: #fbf7f7;
-// Base
 
+// Base
 body,
 a,
 h1 {
   box-sizing: border-box;
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  // Only for mac
-  // Slightly slimmer, smoother and lighter in color.
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: bold;
@@ -61,6 +57,7 @@ h1 {
 .gallery-header {
   background-color: $primary-color;
 }
+
 // header
 header {
   height: 10vh;
@@ -70,7 +67,6 @@ header {
 .hamburger-warapper {
   display: none;
 }
-
 .nav-links {
   margin: 0 auto;
   padding: 0;
@@ -114,12 +110,10 @@ header {
   padding: 9%;
   line-height: 1.3;
 }
-
 .poster-container {
   height: 1000px;
   width: 100%;
 }
-
 .poster-body {
   transform: rotate(68deg);
   display: flex;
@@ -129,34 +123,28 @@ header {
   height: 86%;
   overflow: hidden;
 }
-
 .bar--black {
   width: 14.2857142857%;
   height: 100%;
   background-color: $black;
   animation: pulse $duration $timing infinite;
 }
-
 .bar--red,
 .bar--green {
   width: 7.14285714286%;
   height: 50%;
 }
-
 .bar--red {
   background-color: $green;
   animation: slideDown $duration $timing infinite alternate;
 }
-
 .bar--green {
   background-color: $white;
   animation: slideUp $duration $timing infinite alternate;
 }
-
 .bar--middle {
   margin-top: 25%;
 }
-
 .bar--bottom {
   margin-top: 50%;
 }
