@@ -60,7 +60,7 @@ h1 {
 
 // header
 header {
-  height: 10vh;
+  height: 20vh;
   align-items: flex-end;
   padding-top: 20%;
 }
@@ -73,18 +73,27 @@ header {
   list-style: none;
   text-align: center;
 }
+
 .nav-links li {
   margin: 7px;
   border-bottom: 1px solid $black;
 }
+
 .logo {
+  font-weight: bold;
   border-bottom: 1px solid $black;
 }
-.logo a,
+
 .nav-links a {
   display: block;
   text-decoration: none;
   color: $black;
+}
+
+.nav-links li:hover,
+.nav-links a:hover{
+  color: $white;
+  border-bottom: 1px solid  $white;
 }
 
 // main
@@ -221,11 +230,18 @@ header {
 .topics-cta-line {
   padding-left: 1.5%;
 }
+
 .topics-cta-line a {
   border-bottom: 1px solid $primary-color;
   text-decoration: none;
   color: $primary-color;
 }
+.topics-cta-line a:hover{
+  border-bottom: 1px solid $green;
+  text-decoration: none;
+  color: $green;
+}
+
 footer {
   padding: 1.5%;
   border-top: 1px solid $white;

@@ -1,3 +1,11 @@
+@-webkit-keyframes slideDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
 @keyframes slideDown {
   0% {
     transform: translateY(0);
@@ -6,12 +14,31 @@
     transform: translateY(50%);
   }
 }
+@-webkit-keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
 @keyframes slideUp {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(-50%);
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes pulse {
@@ -25,9 +52,6 @@
     transform: scale(1);
   }
 }
-/**
- * Variables
- */
 body,
 a,
 h1 {
@@ -47,7 +71,7 @@ h1 {
 }
 
 header {
-  height: 10vh;
+  height: 20vh;
   align-items: flex-end;
   padding-top: 20%;
 }
@@ -69,14 +93,20 @@ header {
 }
 
 .logo {
+  font-weight: bold;
   border-bottom: 1px solid #060807;
 }
 
-.logo a,
 .nav-links a {
   display: block;
   text-decoration: none;
   color: #060807;
+}
+
+.nav-links li:hover,
+.nav-links a:hover {
+  color: #fbf7f7;
+  border-bottom: 1px solid #fbf7f7;
 }
 
 .title {
@@ -93,7 +123,8 @@ header {
 .date img {
   height: 100%;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .poster-content {
@@ -124,7 +155,8 @@ header {
   width: 14.2857142857%;
   height: 100%;
   background-color: #060807;
-  animation: pulse 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  -webkit-animation: pulse 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+          animation: pulse 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
 }
 
 .bar--red,
@@ -135,12 +167,14 @@ header {
 
 .bar--red {
   background-color: #97be9b;
-  animation: slideDown 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite alternate;
+  -webkit-animation: slideDown 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite alternate;
+          animation: slideDown 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite alternate;
 }
 
 .bar--green {
   background-color: #fbf7f7;
-  animation: slideUp 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite alternate;
+  -webkit-animation: slideUp 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite alternate;
+          animation: slideUp 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite alternate;
 }
 
 .bar--middle {
@@ -245,6 +279,12 @@ header {
   color: #d8ba5b;
 }
 
+.topics-cta-line a:hover {
+  border-bottom: 1px solid #97be9b;
+  text-decoration: none;
+  color: #97be9b;
+}
+
 footer {
   padding: 1.5%;
   border-top: 1px solid #fbf7f7;
@@ -258,26 +298,21 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
   .poster-container {
     height: 80vh;
     width: 100%;
   }
-
   .topics-headeing {
     width: 100%;
     margin: none;
     padding: 10%;
   }
-
   .topics-headeing h2 {
     font-size: 68px;
   }
-
   .box {
     font-size: 32px;
   }
-
   .box1,
 .box3,
 .box4,
@@ -293,29 +328,22 @@ footer {
 .box18 {
     display: none;
   }
-
   .box2,
 .box8,
 .box14 {
     border: 30px solid #fbf7f7;
   }
-
   .box5,
 .box11 {
     border: none;
   }
-
   .topics-cta {
     height: 500px;
   }
-
   .topics-cta h2 {
     font-size: 96px;
   }
-
   footer {
     font-size: 10px;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
